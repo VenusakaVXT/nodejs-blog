@@ -4,7 +4,7 @@ class NewController {
         res.render('news')
     }
 
-    // [GET] /news/detail
+    // [GET] /news/slug
     show(req, res) {
         res.send('NEWS DISPLAY')
     }
