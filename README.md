@@ -54,7 +54,7 @@ npm i nodemon
 
 Next, we need a middleware to handle the logic between the request/response and the web server. Here I choose **Morgan**.
 
-## Start up and Customize the Web Server
+## Start up the Web Server
 To start the web server you can run the command below.
 ```
 node app.js
@@ -68,6 +68,19 @@ But since I have installed Nodemon so that I can run the program throughout even
 Then we restart the server 1 time throughout.
 ```
 npm start
+```
+
+From here you can access the web server using the address http://localhost:3000/
+
+## Customize the Web Server
+Install Express Handlebars:
+```
+npm i express-handlebars
+```
+
+Install Node SASS:
+```
+npm i node-sass
 ```
 
 Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css**.
