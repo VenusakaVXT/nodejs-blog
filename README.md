@@ -56,7 +56,7 @@ npm run watch
 ```
 
 You can rest assured that I have set **watch** in the **package.json** file.
-```json
+```
 "watch": "node-sass -w src/resources/scss/ -o src/public/css/"
 // -w = --watch
 // -o = --output
