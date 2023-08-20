@@ -31,7 +31,8 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 - [**Husky 🐶**](https://github.com/typicode/husky)
 - [**Mongoose Slug Updater**](https://github.com/YuriGor/mongoose-slug-updater)
 
-## How it works
+# How it works
+## Environment settings
 To run the server environment, you must download NodeJS first.
 
 Once **node** is installed, the npm package manager (used to manage NodeJS application modules, libraries and dependencies) will be automatically installed, which you can check like below, if the version is not displayed, you have not successfully installed npm.
@@ -56,6 +57,7 @@ Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css*
 npm run watch
 ```
 
+## Start up and Customize the Web Server
 You can rest assured that I have set **watch** in the **package.json** file.
 ```
 "watch": "node-sass -w src/resources/scss/ -o src/public/css/"
