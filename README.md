@@ -123,7 +123,7 @@ We can also manually mark **breakpoint** for the statement in the **Sources** ta
 
 <div align="center">
 
-![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/378280e2-7cb6-45d4-84e1-705316fa3f99)
+![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/bf861a86-ba94-4077-b1df-59d62ce21977)
 
 </div>
 
