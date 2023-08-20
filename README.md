@@ -30,4 +30,5 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 - [**Husky 🐶**](https://github.com/typicode/husky)
 - [**Mongoose Slug Updater**](https://github.com/YuriGor/mongoose-slug-updater)
 
-
+## How it works
+To run the server environment, you must download NodeJS first
