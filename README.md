@@ -52,17 +52,17 @@ Download **Nodemon** so that you don't have to manually restart the server when 
 npm i nodemon
 ```
 
+Next, we need a middleware to handle the logic between the request/response and the web server. Here I choose **Morgan**.
+
+## Start up and Customize the Web Server
 Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css**.
 ```
 npm run watch
 ```
 
-## Start up and Customize the Web Server
 You can rest assured that I have set **watch** in the **package.json** file.
 ```
 "watch": "node-sass -w src/resources/scss/ -o src/public/css/"
 // -w = --watch
 // -o = --output
 ```
-
-
