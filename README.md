@@ -55,6 +55,21 @@ npm i nodemon
 Next, we need a middleware to handle the logic between the request/response and the web server. Here I choose **Morgan**.
 
 ## Start up and Customize the Web Server
+To start the web server you can run the command below.
+```
+node app.js
+```
+
+But since I have installed Nodemon so that I can run the program throughout even if there is a change in the source code to avoid losing time when having to restart continuously, we can do the following:
+```json
+"start": "nodemon src/app.js"
+```
+
+Then we restart the server 1 time throughout.
+```
+npm start
+```
+
 Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css**.
 ```
 npm run watch
