@@ -83,7 +83,7 @@ Install Node SASS:
 npm i node-sass
 ```
 
-Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css**.
+**Start the Nodemon tool to transfer the SCSS handler code to your file.css.**
 ```
 npm run watch
 ```
@@ -94,3 +94,37 @@ You can rest assured that I have set **watch** in the **package.json** file.
 // -w = --watch
 // -o = --output
 ```
+
+## Database Link
+Here I use MongoDB to manage the database.
+
+To be able to interact between relationships, create functions, ... for MongoDB in NodeJS we need to install **Mongoose** library.
+```
+npm i mongoose
+```
+
+## Extensions
+In addition, **Nodemon** also supports an additional feature called **inspector** that allows you to debug when the application is reloading automatically.
+
+To open the Inspector, add *--inspector* to the **option** position in *start* of the *package.json* file.
+```json
+"start": "nodemon --inspect src/app.js"
+```
+
+Turn on **Inspect** on the website and we see a **NodeJS** icon next to the **Element** tab. Click on it, the **Inspector** window of Nodemon is opened.
+
+<div align="center">
+
+![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/51e030c5-2c7a-401b-8b19-cb842b7ee92b)
+
+</div>
+
+We can also manually mark **breakpoint** for the statement in the **Sources** tab.
+
+<div align="center">
+
+![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/378280e2-7cb6-45d4-84e1-705316fa3f99)
+
+</div>
+
+
