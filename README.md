@@ -130,4 +130,4 @@ We can also manually mark **breakpoint** for the statement in the **Sources** ta
 # End README
 Hopefully I have provided you with a NodeJS library so that you can build many products from the available web server.
 
-More details about the libraries with other features that may apply to your product, you can see the link I attached in **Support** or visit the npm homepage https://www .npmjs.com/ to search.
+More details about the libraries with other features that may apply to your product, you can see the link I attached in **Support** or visit the npm homepage https://www.npmjs.com/ to search.
