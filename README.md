@@ -31,4 +31,35 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 - [**Mongoose Slug Updater**](https://github.com/YuriGor/mongoose-slug-updater)
 
 ## How it works
-To run the server environment, you must download NodeJS first
+To run the server environment, you must download NodeJS first.
+
+Once **node** is installed, the npm package manager (used to manage NodeJS application modules, libraries and dependencies) will be automatically installed, which you can check like below, if the version is not displayed, you have not successfully installed npm.
+
+Please install **npm** for installation and support for other libraries.
+```
+npm -v
+```
+
+Next is to install **ExpressJS** (a NodeJS framework) to provide necessary features such as **routing**, **middleware**, **request** and **response** handling.
+```
+npm i express
+```
+
+Download **Nodemon** so that you don't have to manually restart the server when you change the source code, **Nodemon** will automatically update the new source code for you.
+```
+npm i nodemon
+```
+
+Start the Nodemon tool to transfer the **SCSS** handler code to your **file.css**.
+```
+npm run watch
+```
+
+You can rest assured that I have set **watch** in the **package.json** file.
+```json
+"watch": "node-sass -w src/resources/scss/ -o src/public/css/"
+// -w = --watch
+// -o = --output
+```
+
+
