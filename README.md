@@ -39,17 +39,17 @@ Once **node** is installed, the npm package manager (used to manage NodeJS appli
 
 Please install **npm** for installation and support for other libraries.
 ```
-npm -v
+$ npm -v
 ```
 
 Next is to install **ExpressJS** (a NodeJS framework) to provide necessary features such as **routing**, **middleware**, **request** and **response** handling.
 ```
-npm i express
+$ npm i express
 ```
 
 Download **Nodemon** so that you don't have to manually restart the server when you change the source code, **Nodemon** will automatically update the new source code for you.
 ```
-npm i nodemon
+$ npm i nodemon
 ```
 
 Next, we need a middleware to handle the logic between the request/response and the web server. Here I choose **Morgan**.
@@ -57,7 +57,7 @@ Next, we need a middleware to handle the logic between the request/response and 
 ## Start up the Web Server
 To start the web server you can run the command below.
 ```
-node app.js
+$ node app.js
 ```
 
 But since I have installed Nodemon so that I can run the program throughout even if there is a change in the source code to avoid losing time when having to restart continuously, we can do the following:
@@ -67,7 +67,7 @@ But since I have installed Nodemon so that I can run the program throughout even
 
 Then we restart the server 1 time throughout.
 ```
-npm start
+$ npm start
 ```
 
 From here you can access the web server using the address http://localhost:3000/
@@ -75,17 +75,17 @@ From here you can access the web server using the address http://localhost:3000/
 ## Customize the Web Server
 Install Express Handlebars:
 ```
-npm i express-handlebars
+$ npm i express-handlebars
 ```
 
 Install Node SASS:
 ```
-npm i node-sass
+$ npm i node-sass
 ```
 
 **Start the Nodemon tool to transfer the SCSS handler code to your file.css.**
 ```
-npm run watch
+$ npm run watch
 ```
 
 You can rest assured that I have set **watch** in the **package.json** file.
@@ -100,7 +100,7 @@ Here I use MongoDB to manage the database.
 
 To be able to interact between relationships, create functions, ... for MongoDB in NodeJS we need to install **Mongoose** library.
 ```
-npm i mongoose
+$ npm i mongoose
 ```
 
 ## Extensions
