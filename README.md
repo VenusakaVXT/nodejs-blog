@@ -14,4 +14,18 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 ![mongodb](https://badgen.net/badge/database/mongodb?labelColor=black&color=green)
 ![prettier](https://badgen.net/badge/format%20code/prettier?labelColor=black&color=grey)
 
+## Suport
+- [**GitHub**](https://github.com/github)
+- [**npm**](https://github.com/npm)
+- [**ExpressJS**](github.com/expressjs/express)
+- [**Nodemon**](github.com/remy/nodemon)
+- [**Morgan**](github.com/expressjs/morgan)
+- [**Handlebars**](https://github.com/express-handlebars/express-handlebars)
+- [**Node SASS**](github.com/sass/node-sass)
+- [**Boostrap 4**](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [**MongoDB**](https://www.mongodb.com/try)
+- [**Mongoose**](https://github.com/Automattic/mongoose)
+- [**Prettier**](https://github.com/prettier/prettier)
+- [**Lint Staged**](https://github.com/okonet/lint-staged)
+- [**Husky 🐶**](https://github.com/typicode/husky)
 
