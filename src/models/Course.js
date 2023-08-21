@@ -13,7 +13,7 @@ const Course = new Schema({
     level: { type: String, maxLength: 250},
     sumVd: { type: String, maxLength: 250},
     time: { type: String, maxLength: 250},
-    slug: { type: String, slug: 'name', unique: true}
+    slug: { type: String, slug: 'name', unique: true} // unique: used to specify that each slug value must be unique in the database.
     // createdAt: { type: Date, default: Date.now},
     // updatedAt: { type: Date, default: Date.now},
 }, { timestamps: true })
