@@ -95,6 +95,11 @@ You can rest assured that I have set **watch** in the **package.json** file.
 // -o = --output
 ```
 
+Middleware that helps the server system convert the default request from the POST method in the <form></form> of the HTML to a PUT.
+```
+$ npm i method-override
+```
+
 ## Database Link
 Here I use MongoDB to manage the database.
 
