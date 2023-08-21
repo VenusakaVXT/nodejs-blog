@@ -1,9 +1,11 @@
 @import 'variable';
 
+// Test variable
 // h1 {
 //     color: $red-color;
 // } 
 
+// Background
 .bg-dark {
     background: #1d1d1d !important;
 }
@@ -13,6 +15,7 @@ body {
     color: #fff;
 }
 
+// Card course
 .card-course-item {
     margin-top: 16px;
 }
@@ -32,6 +35,13 @@ body {
     color: #ff0730;
 }
 
+// CSS table course of me
 .table-courses {
     text-align: center;
+}
+
+// CSS modal
+.modal {
+    margin: auto;
+    color: #000;
 }
