@@ -95,12 +95,42 @@ You can rest assured that I have set **watch** in the **package.json** file.
 // -o = --output
 ```
 
+Middleware that helps the server system convert the default request from the POST method in the <form></form> of the HTML to a PUT.
+```
+$ npm i method-override
+```
+
 ## Database Link
-Here I use MongoDB to manage the database.
+Here I use MongoDB (display data as JSON) to manage the database.
 
 To be able to interact between relationships, create functions, ... for MongoDB in NodeJS we need to install **Mongoose** library.
 ```
 $ npm i mongoose
+```
+
+This is my database demo to test the web server.
+
+![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/c85a48f0-4b98-4810-900d-97df8fe5e3eb)
+
+To connect to your database, for my example, here the default port for MongoDB connection is `27017` and the database name is `nodejs_blog`.
+
+I will create a module like this in **src/config/db**.
+```javascript
+const mongoose = require('mongoose');
+
+async function connect() {
+    try {
+        await mongoose.connect('mongodb://localhost:27017/nodejs_blog', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        })
+        console.log('Connect successfully!!!')
+    } catch(err) {
+        console.log('Connect failure!!!')
+    }
+}
+
+module.exports = { connect }
 ```
 
 ## Extensions
