@@ -44,3 +44,14 @@ body {
 .modal {
     color: #000;
 }
+
+// Courses list
+.list-courses__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-courses__header a:hover {
+    color: #ff0730;
+}

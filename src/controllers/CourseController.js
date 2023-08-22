@@ -20,7 +20,7 @@ class CourseController {
     store(req, res, next) {
         const course = new Course(req.body)
         course.save()
-            .then(() => res.redirect(`/`))
+            .then(() => res.redirect('/'))
             .catch(err => {})
     }
 
@@ -36,13 +36,20 @@ class CourseController {
     // [PUT] /courses/:id
     update(req, res, next) {
         Course.updateOne({ _id: req.params.id }, req.body)
-            .then(() => res.redirect('/me/store/courses'))
+            .then(() => res.redirect('/me/stored/courses'))
             .catch(next)
     }
 
     // [DELETE] /courses/:id
     remove(req, res, next) {
-        Course.deleteOne({ _id: req.params.id })
+        Course.delete({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next)
+    }
+
+    // [PATCH] /courses/:id/restore
+    restore(req, res, next) {
+        Course.restore({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next)
     }

@@ -3,6 +3,7 @@ const router = express.Router()
 
 const meController = require('../controllers/MeController')
 
-router.get('/store/courses', meController.storeCourses)
+router.get('/stored/courses', meController.storeCourses)
+router.get('/trash/courses', meController.trashCourses)
 
 module.exports = router
