@@ -51,11 +51,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to delete the course?</p>
+                <p>Are you sure you want to delete the course <span style="font-weight:600;">permanently</span>?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" id="course-delete-btn" class="btn btn-primary">Yes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" id="course-delete-btn" class="btn btn-primary btn-danger">Permanently
+                    deleted</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -79,11 +80,11 @@
         })
 
         courseDeleteBtn.addEventListener('click', function () {
-            deleteForm.action = '/courses/' + courseId + '?_method=DELETE'
+            deleteForm.action = '/courses/' + courseId + '/force?_method=DELETE'
             deleteForm.submit()
         })
 
-        restoreBtn.click(function(e) {
+        restoreBtn.click(function (e) {
             e.preventDefault()
             var courseId = $(this).data('id')
             restoreForm.action = '/courses/' + courseId + '/restore?_method=PATCH'
