@@ -30,6 +30,7 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 - [**Lint Staged**](https://github.com/okonet/lint-staged)
 - [**Husky 🐶**](https://github.com/typicode/husky)
 - [**Mongoose Slug Updater**](https://github.com/YuriGor/mongoose-slug-updater)
+- [**Mongoose Delete Plugin**](https://github.com/dsanel/mongoose-delete)
 
 # How it works
 ## Environment settings
