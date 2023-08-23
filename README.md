@@ -133,6 +133,11 @@ async function connect() {
 module.exports = { connect }
 ```
 
+To support **Soft delete** data feature, we must use the **mongoose-delete** library of mongoose.
+```
+$ npm i mongoose-delete
+```
+
 ## Extensions
 In addition, **Nodemon** also supports an additional feature called **inspector** that allows you to debug when the application is reloading automatically.
 
