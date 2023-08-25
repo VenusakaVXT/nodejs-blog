@@ -13,7 +13,7 @@
                 <option value="">--- Action ---</option>
                 <option value="delete">Delete</option>
             </select>
-            <button class="btn btn-primary btn-sm btn-apply custom-item disabled">Apply</button>
+            <button class="btn btn-primary btn-sm btn-apply custom-item" disabled>Apply</button>
         </div>
         <a class="list-courses__header-trash" href="/me/trash/courses">Recycle Bin {{deletedCount}}</a>
     </div>
@@ -109,14 +109,14 @@
 
         // Handle "Select all" with checkbox
         // Checkbox all clicked
-        checkboxAll.change(function() {
+        checkboxAll.change(function () {
             var isCheckedAll = $(this).prop('checked')
             courseCheckboxItem.prop('checked', isCheckedAll) // isCheckedAll type: boolean
             renderApplyBtn()
         })
 
         // Course item checkbox clicked
-        courseCheckboxItem.change(function() {
+        courseCheckboxItem.change(function () {
             var isCheckedAll = courseCheckboxItem.length === $('input[name="courseIds[]"]:checked').length
             checkboxAll.prop('checked', isCheckedAll)
             renderApplyBtn()
@@ -125,17 +125,19 @@
         function renderApplyBtn() {
             var checkedCount = $('input[name="courseIds[]"]:checked').length
             if (checkedCount) {
-                btnApply.removeClass('disabled')
+                btnApply.attr('disabled', false)
             } else {
-                btnApply.addClass('disabled')
+                btnApply.attr('disabled', true)
             }
         }
 
+        /**
         btnApply.on('submit', function(e) {
             var isSubmittable = !$(this).hasClass('disabled')
             if (!isSubmittable) {
                 e.preventDefault()
             }
         })
+        **/
     })
 </script>

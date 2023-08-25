@@ -14,7 +14,7 @@
                 <option value="restore">Restore</option>
                 <option value="permanently-deleted">Delete</option>
             </select>
-            <button class="btn btn-primary btn-sm btn-apply custom-item disabled">Apply</button>
+            <button class="btn btn-primary btn-sm btn-apply custom-item" disabled>Apply</button>
         </div>
         <a href="/me/stored/courses">List courses</a>
     </div>
@@ -94,7 +94,8 @@
         var courseId;
         var deleteForm = document.forms['course-delete-form']
         var restoreForm = document.forms['course-restore-form']
-        var containerForm = document.forms['container-form']
+        // var containerForm = document.forms['container-form']
+        var containerForm = $('form[name="container-form"]')
         var courseDeleteBtn = document.getElementById('course-delete-btn')
         var restoreBtn = $('.btn-restore')
         var checkboxAll = $('#checkbox-all')
@@ -136,17 +137,19 @@
         function renderApplyBtn() {
             var checkedCount = $('input[name="courseIds[]"]:checked').length
             if (checkedCount) {
-                btnApply.removeClass('disabled')
+                btnApply.attr('disabled', false)
             } else {
-                btnApply.addClass('disabled')
+                btnApply.attr('disabled', true)
             }
         }
 
-        btnApply.on('submit', function(e) {
-            var isSubmittable = !$(this).hasClass('disabled')
+        /**
+        containerForm.on('submit', function(e) {
+            var isSubmittable = !btnApply.hasClass('disabled')
             if (!isSubmittable) {
                 e.preventDefault()
             }
         })
+        **/
     })
 </script>
