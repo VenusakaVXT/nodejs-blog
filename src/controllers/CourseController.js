@@ -61,11 +61,29 @@ class CourseController {
             .catch(next)
     }
 
-    // [POST] /courses/handle-form-action
-    handleFormAction(req, res, next) {
+    // [POST] /courses/handle-delete-form-action
+    handleDeleteFormAction(req, res, next) {
         switch (req.body.action) {
             case 'delete':
                 Course.delete({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next)
+                break
+            default:
+                res.json({ message: 'Action is invalid' })
+        }
+    }
+
+    // [POST] /courses/handle-restore-form-action
+    handleRestoreFormAction(req, res, next) {
+        switch (req.body.action) {
+            case 'restore':
+                Course.restore({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next)
+                break
+            case 'permanently-deleted':
+                Course.deleteOne({ _id: { $in: req.body.courseIds } })
                     .then(() => res.redirect('back'))
                     .catch(next)
                 break

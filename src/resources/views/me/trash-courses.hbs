@@ -1,20 +1,20 @@
-<div class="mt-4">
+<form class="mt-4" name="container-form" method="POST" action="/courses/handle-restore-form-action">
     <h3>Courses deleted</h3>
 
     <div class="list-courses__header mt-4">
         <div class="list-courses__header-custom">
             <div class="form-check custom-item">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label form-check-label-lg" for="defaultCheck1">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
+                <label class="form-check-label form-check-label-lg" for="checkbox-all">
                     Select all
                 </label>
             </div>
-            <select class="form-control custom-item select-action" id="">
-                <option>--- Action ---</option>
-                <option>Restore</option>
-                <option>Delete</option>
+            <select class="form-control custom-item select-action" name="action" required>
+                <option value="">--- Action ---</option>
+                <option value="restore">Restore</option>
+                <option value="permanently-deleted">Delete</option>
             </select>
-            <button class="btn btn-primary btn-sm custom-item">Apply</button>
+            <button class="btn btn-primary btn-sm btn-apply custom-item disabled">Apply</button>
         </div>
         <a href="/me/stored/courses">List courses</a>
     </div>
@@ -22,6 +22,7 @@
     <table class="table table-courses mt-4" border="1">
         <thead class="thead-dark">
             <tr>
+                <th scope="col">Tick</th>
                 <th scope="col">#</th>
                 <th scope="col">Course name</th>
                 <th scope="col">Level</th>
@@ -32,6 +33,11 @@
         <tbody>
             {{#each courses}}
             <tr>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="courseIds[]" value="{{this._id}}">
+                    </div>
+                </td>
                 <th scope="row">{{sum @index 1}}</th>
                 <td>{{this.name}}</td>
                 <td>{{this.level}}</td>
@@ -48,14 +54,14 @@
             </tr>
             {{else}}
             <tr>
-                <td colspan="5">No courses have been deleted.
+                <td colspan="6">No courses have been deleted.
                     <a href="/me/stored/courses">List courses</a>
                 </td>
             </tr>
             {{/each}}
         </tbody>
     </table>
-</div>
+</form>
 
 {{!-- Confirm delete course --}}
 <div id="deleteCourseModal" class="modal" tabindex="-1" role="dialog">
@@ -88,8 +94,12 @@
         var courseId;
         var deleteForm = document.forms['course-delete-form']
         var restoreForm = document.forms['course-restore-form']
+        var containerForm = document.forms['container-form']
         var courseDeleteBtn = document.getElementById('course-delete-btn')
         var restoreBtn = $('.btn-restore')
+        var checkboxAll = $('#checkbox-all')
+        var courseCheckboxItem = $('input[name="courseIds[]"]')
+        var btnApply = $('.btn-apply')
 
         $('#deleteCourseModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)
@@ -106,6 +116,37 @@
             var courseId = $(this).data('id')
             restoreForm.action = '/courses/' + courseId + '/restore?_method=PATCH'
             restoreForm.submit()
+        })
+
+        // Handle "Select all" with checkbox
+        // Checkbox all clicked
+        checkboxAll.change(function() {
+            var isCheckedAll = $(this).prop('checked')
+            courseCheckboxItem.prop('checked', isCheckedAll) // isCheckedAll type: boolean
+            renderApplyBtn()
+        })
+
+        // Course item checkbox clicked
+        courseCheckboxItem.change(function() {
+            var isCheckedAll = courseCheckboxItem.length === $('input[name="courseIds[]"]:checked').length
+            checkboxAll.prop('checked', isCheckedAll)
+            renderApplyBtn()
+        })
+
+        function renderApplyBtn() {
+            var checkedCount = $('input[name="courseIds[]"]:checked').length
+            if (checkedCount) {
+                btnApply.removeClass('disabled')
+            } else {
+                btnApply.addClass('disabled')
+            }
+        }
+
+        btnApply.on('submit', function(e) {
+            var isSubmittable = !$(this).hasClass('disabled')
+            if (!isSubmittable) {
+                e.preventDefault()
+            }
         })
     })
 </script>
