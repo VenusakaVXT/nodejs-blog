@@ -38,6 +38,16 @@ body {
 // CSS table course of me
 .table-courses {
     text-align: center;
+    line-height: 37.5px;
+}
+
+.table-courses .form-check,
+.table-courses .form-check-input {
+    margin-right: 0;
+}
+
+.table-courses .form-check-input {
+    margin-top: 13px;
 }
 
 // CSS modal
@@ -50,8 +60,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
 }
 
-.list-courses__header a:hover {
+.list-courses__header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-courses__header-custom .select-action {
+    width: 140px;
+    margin: 0 18px;
+}
+
+.list-courses__header-trash:hover {
     color: #ff0730;
 }
