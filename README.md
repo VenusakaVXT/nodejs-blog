@@ -163,6 +163,9 @@ We can also manually mark **breakpoint** for the statement in the **Sources** ta
 
 </div>
 
+# Application examples
+Here I use **nodejs_blog** library to make an online course management application, mainly functions centered around **CRUD** including features of **Soft Delete ( Delete to Trash, Restore, Permanently Delete)**, you can use it to change UI and apply to other management problems and have more functions like search, sort, ....
+
 # End README
 Hopefully I have provided you with a NodeJS library so that you can build many products from the available web server.
 
