@@ -101,7 +101,7 @@ Middleware that helps the server system convert the default request from the POS
 $ npm i method-override
 ```
 
-## Database Link
+## Database Connection
 Here I use MongoDB (display data as JSON) to manage the database.
 
 To be able to interact between relationships, create functions, ... for MongoDB in NodeJS we need to install **Mongoose** library.
