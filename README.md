@@ -101,7 +101,7 @@ Middleware that helps the server system convert the default request from the POS
 $ npm i method-override
 ```
 
-## Database Link
+## Database Connection
 Here I use MongoDB (display data as JSON) to manage the database.
 
 To be able to interact between relationships, create functions, ... for MongoDB in NodeJS we need to install **Mongoose** library.
@@ -162,6 +162,9 @@ We can also manually mark **breakpoint** for the statement in the **Sources** ta
 ![image](https://github.com/VenusakaVXT/nodejs-blog/assets/125566811/bf861a86-ba94-4077-b1df-59d62ce21977)
 
 </div>
+
+# Application examples
+Here I use **nodejs_blog** library to make an online course management application, mainly functions centered around **CRUD** including features of **Soft Delete ( Delete to Trash, Restore, Permanently Delete)**, you can use it to change UI and apply to other management problems and have more functions like search, sort, ....
 
 # End README
 Hopefully I have provided you with a NodeJS library so that you can build many products from the available web server.
