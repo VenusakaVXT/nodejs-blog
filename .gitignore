@@ -2,4 +2,7 @@
 # Do not have
 
 # style CSS
+# Where to synthesize css modules, 
+# avoiding the case where each actor 
+# has a different css writing style.
 src/public/css/
