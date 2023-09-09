@@ -34,9 +34,9 @@ My first Web Server is made from the NodeJS framework of Javascript and many mor
 
 # How it works
 ## Environment settings
-To run the server environment, you must download NodeJS first.
+To run the server environment, you must download **NodeJS** first.
 
-Once **node** is installed, the npm package manager (used to manage NodeJS application modules, libraries and dependencies) will be automatically installed, which you can check like below, if the version is not displayed, you have not successfully installed npm.
+Once **node** is installed, the **npm package manager** (used to manage NodeJS application modules, libraries and dependencies) will be automatically installed, which you can check like below, if the version is not displayed, you have not successfully installed npm.
 
 Please install **npm** for installation and support for other libraries.
 ```
